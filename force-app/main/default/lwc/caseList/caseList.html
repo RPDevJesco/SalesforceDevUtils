@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Cases">
+        <template if:true={cases.data}>
+            <lightning-datatable
+                    key-field="Id"
+                    data={cases.data}
+                    columns={columns}
+                    onrowaction={handleRowAction}>
+            </lightning-datatable>
+        </template>
+        <template if:true={cases.error}>
+            <!-- Display error message if there's an error while fetching cases -->
+            <p>Error fetching cases: {cases.error}</p>
+        </template>
+    </lightning-card>
+</template>

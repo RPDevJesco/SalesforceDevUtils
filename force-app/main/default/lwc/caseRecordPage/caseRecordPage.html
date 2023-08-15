@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title="Case Details" if:true={selectedCase}>
+        <p><strong>Case Number:</strong> {selectedCase.CaseNumber}</p>
+        <p><strong>Subject:</strong> {selectedCase.Subject}</p>
+        <p><strong>Status:</strong> {selectedCase.Status}</p>
+        <!-- Add more fields as needed -->
+    </lightning-card>
+</template>
